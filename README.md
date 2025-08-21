@@ -1,2 +1,2 @@
-# Tabela-peso2
-tabela de nutricao
+# tabelaNutricao
+Arquivos HTML, CSS e JS para criação da tabela de nutrição.
