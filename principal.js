@@ -1,7 +1,7 @@
 //muda o nome a partir do seletor de classe
 var subtitulo = document.querySelector(".subtitulo");
 var titulo = document.querySelector(".titulo");
-titulo.textContent = "Lucas Nutrição";
+titulo.textContent = "Fernanda Nutrição";
 subtitulo.textContent = "Meus Pacientes";
 
 //acessar a tag tr - paciente Paulo
