@@ -51,6 +51,38 @@ function mostraMensagem(){
     alert("Este elemento foi clicado");
 }
 
+//Acessa o botão
+var botaoAdicionar = documet.querySelector("#adicionar-paciente");
+
+//Executa os código ao clicar no botão
+botaoAdicionar.addEventListener('click', function(event){
+    event.preventDefault();
+
+//acessa o formulário
+var formulario = document.querySelector("#form-adiciona");
+
+//Captura os valores digitados
+var nome = formulario.nome.value;
+var peso = formulario.peso.value;
+var altura = formulario.altura.value;
+var gordura = formulario.gordura.value;
+
+//Cria a tag , <tr>
+var pacienteTr = document.createElement("tr");
+//Cria as tags no <td>
+var nomeTd = documet.createElement("td");
+var pesoTd = document.createElement("td");
+var alturaTd = documet.createElement("td");
+var gorduraTd = documet.createElement("td");
+var imcTd = documet.createElement("td");
+
+nomeTd.textContent = nome;
+pesoTd.textContent = peso;
+alturaTd.textContent = altura;
+gorduraTd.textContent = gordura;
+imcTd.textContent = imc;
+});
+
 
 
 
