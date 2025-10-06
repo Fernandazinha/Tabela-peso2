@@ -23,9 +23,9 @@ for(var i = 0; i < pacientes.length; i++){
 
     //variáveis com valor true
     var pesoValido = true;
-    var alturaValida = true; 
+    var alturaValido = true; 
 
-    if(pesoValido && alturaValida){
+    if(pesoValido && alturaValido){
         // acessa e altera o imc
         var tdImc = paciente.querySelector(".info-imc");
         tdImc.textContent = imc.toFixed(2);
@@ -38,8 +38,8 @@ for(var i = 0; i < pacientes.length; i++){
         
     }
     if(altura <= 0 || altura >= 3.00){
-        var alturaValida = false;
-        tdImc.textContent = "Altura Inválida";
+        var alturaValido = false;
+        tdImc.textContent = "Altura Inválido";
         paciente.classList.add("campo-invalido");
 
     }
@@ -52,7 +52,7 @@ function mostraMensagem(){
 }
 
 //Acessa o botão
-var botaoAdicionar = documet.querySelector("#adicionar-paciente");
+var botaoAdicionar = document.querySelector("#adicionar-paciente");
 
 //Executa os código ao clicar no botão
 botaoAdicionar.addEventListener('click', function(event){
@@ -70,17 +70,27 @@ var gordura = formulario.gordura.value;
 //Cria a tag , <tr>
 var pacienteTr = document.createElement("tr");
 //Cria as tags no <td>
-var nomeTd = documet.createElement("td");
+var nomeTd = document.createElement("td");
 var pesoTd = document.createElement("td");
-var alturaTd = documet.createElement("td");
-var gorduraTd = documet.createElement("td");
-var imcTd = documet.createElement("td");
+var alturaTd = document.createElement("td");
+var gorduraTd = document.createElement("td");
+var imcTd = document.createElement("td");
 
 nomeTd.textContent = nome;
 pesoTd.textContent = peso;
 alturaTd.textContent = altura;
 gorduraTd.textContent = gordura;
 imcTd.textContent = imc;
+
+//Adiciona as tags na tela do usário
+pacienteTr.appendChild(nomeTd);
+pacienteTr.appendChild(pesoTd);
+pacienteTr.appendChild(alturaTd);
+pacienteTr.appendChild(gorduraTd);
+pacienteTr.appendChild(imcTd);
+
+var tabela = document.querySelector("#tabela-pacientes");
+tabela.appendChild(pacienteTr);
 });
 
 
